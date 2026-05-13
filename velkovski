@@ -1,0 +1,1000 @@
+[5/14/2026 12:02 AM] MedBed Access Center: animation: fadeUp 0.9s 0.4s forwards;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--glow);
+    }
+
+    .hero-sub {
+      margin-top: 20px;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      max-width: 380px;
+      line-height: 1.7;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.6s forwards;
+    }
+
+    .hero-cta {
+      margin-top: 32px;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.8s forwards;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--purple);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+      box-shadow: 0 0 30px rgba(107,33,168,0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--purple-mid);
+      box-shadow: 0 0 50px rgba(168,85,247,0.5);
+      transform: translateY(-1px);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      animation: fadeIn 1s 1.4s forwards;
+    }
+
+    .scroll-hint span {
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      writing-mode: vertical-rl;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--purple-lit), transparent);
+      animation: pulse-line 2s infinite;
+    }
+
+    @keyframes pulse-line {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    /* ─── SECTION BASE ─── */
+    section { padding: 80px 24px; }
+
+    .section-label {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--purple-lit);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 9vw, 68px);
+      font-weight: 700;
+      line-height: 0.95;
+      color: var(--white);
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--glow);
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--purple);
+      margin: 28px 0;
+    }
+
+    /* ─── ABOUT ─── */
+    .about {
+      background: var(--deep);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .about { grid-template-columns: 1fr; gap: 32px; }
+      .about-img-wrap { order: -1; }
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: saturate(0.85) brightness(0.9);
+    }
+
+    .about-img-border {
+      position: absolute;
+      top: 16px; left: 16px;
+      right: -16px; bottom: -16px;
+      border: 1px solid rgba(107,33,168,0.4);
+      z-index: -1;
+    }
+
+    .about-img-glow {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(107,33,168,0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .about-text p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .about-text p strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .about-text p em {
+      color: var(--glow);
+      font-style: normal;
+    }
+
+    /* ─── PROBLEM ─── */
+    .problem-section {
+      background: var(--black);
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .problem-section .section-title {
+      margin-bottom: 24px;
+    }
+
+    .problem-body {
+      font-size: 16px;
+      line-height: 1.9;
+[5/14/2026 12:02 AM] MedBed Access Center: color: var(--muted);
+    }
+
+    .problem-body strong { color: var(--white); }
+
+    .problem-highlight {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 20px 28px;
+      background: var(--card);
+      border-left: 3px solid var(--purple);
+      text-align: left;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--white);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 20px;
+    }
+
+    /* ─── SERVICES ─── */
+    .services-wrap {
+      background: var(--deep);
+    }
+
+    .services-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .services-inner { grid-template-columns: 1fr; gap: 40px; }
+      .services-img-col { display: none; }
+    }
+
+    .services-img-col {
+      position: sticky;
+      top: 100px;
+    }
+
+    .services-img {
+      width: 100%;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.85) brightness(0.85);
+    }
+
+    .services-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7,5,15,0.6) 0%, transparent 40%);
+    }
+
+    .services-img-wrap { position: relative; }
+
+    .service-cards { display: flex; flex-direction: column; gap: 2px; }
+
+    .service-card {
+      background: var(--card);
+      padding: 28px 24px;
+      border-left: 2px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+      cursor: default;
+    }
+
+    .service-card:hover {
+      border-left-color: var(--purple-lit);
+      background: #1a1330;
+    }
+
+    .service-num {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      color: var(--purple-lit);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .service-name {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    /* ─── PHOTO BREAK ─── */
+    .photo-break {
+      position: relative;
+      height: 55vw;
+      max-height: 520px;
+      min-height: 280px;
+      overflow: hidden;
+    }
+
+    .photo-break img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      filter: brightness(0.5) saturate(0.7);
+    }
+
+    .photo-break-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(107,33,168,0.3) 0%,
+        transparent 50%,
+        rgba(7,5,15,0.5) 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-break-quote {
+      font-family: var(--serif);
+      font-size: clamp(22px, 5vw, 48px);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--white);
+      text-align: center;
+      padding: 0 32px;
+      max-width: 800px;
+      line-height: 1.3;
+      text-shadow: 0 2px 30px rgba(0,0,0,0.8);
+    }
+
+    .photo-break-quote em {
+      color: var(--glow);
+      font-style: italic;
+    }
+
+    /* ─── WHO IT'S FOR ─── */
+    .who-wrap {
+      background: var(--black);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .who-list {
+      list-style: none;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .who-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(107,33,168,0.2);
+    }
+
+    .who-item:first-child { border-top: 1px solid rgba(107,33,168,0.2); }
+
+    .who-check {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border: 1px solid var(--purple-lit);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .who-check::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--purple-lit);
+      display: block;
+[5/14/2026 12:02 AM] MedBed Access Center: <!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filip Velkovski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --black:     #07050f;
+      --deep:      #0d0a1a;
+      --card:      #120e22;
+      --purple:    #6b21a8;
+      --purple-mid:#7c3aed;
+      --purple-lit:#a855f7;
+      --glow:      #c084fc;
+      --white:     #f5f0ff;
+      --muted:     #9b8cad;
+      --serif:     'Cormorant Garamond', Georgia, serif;
+      --sans:      'Montserrat', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NOISE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(7,5,15,0.95) 0%, transparent 100%);
+    }
+
+    .nav-name {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--glow); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      height: 100dvh;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: brightness(0.55) saturate(0.8);
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 30%,
+        rgba(7,5,15,0.5) 65%,
+        rgba(7,5,15,0.97) 100%
+      );
+    }
+
+    .hero-purple-tint {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(107,33,168,0.25) 0%, transparent 60%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 24px 60px;
+      max-width: 700px;
+    }
+
+    .hero-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--purple-lit);
+      margin-bottom: 16px;
+      display: block;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(52px, 14vw, 96px);
+      font-weight: 700;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      opacity: 0;
+[5/14/2026 12:02 AM] MedBed Access Center: }
+
+    .who-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .who-text strong { color: var(--white); }
+
+    /* ─── CTA SECTION ─── */
+    .cta-section {
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .cta-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: brightness(0.35) saturate(0.6);
+    }
+
+    .cta-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(7,5,15,0.92) 0%,
+        rgba(7,5,15,0.7) 50%,
+        rgba(107,33,168,0.2) 100%
+      );
+    }
+
+    @media (max-width: 600px) {
+      .cta-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(7,5,15,0.7) 0%,
+          rgba(7,5,15,0.95) 60%
+        );
+      }
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      padding: 100px 24px;
+      max-width: 600px;
+    }
+
+    .cta-content .section-title {
+      margin-bottom: 20px;
+    }
+
+    .cta-content p {
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--deep);
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      border-top: 1px solid rgba(107,33,168,0.2);
+    }
+
+    .footer-name {
+      font-family: var(--serif);
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: var(--glow); }
+
+    .footer-copy {
+      font-size: 10px;
+      color: rgba(155,140,173,0.4);
+      letter-spacing: 0.1em;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── PURPLE GLOW ACCENTS ─── */
+    .glow-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--purple-lit);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--purple-lit);
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .stat-num em {
+      color: var(--glow);
+      font-style: normal;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+    <span class="nav-name">Filip Velkovski</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#for-you">Who It's For</a></li>
+      <li><a href="https://calendar.app.google/4JnhMynUJskUQgho9" target="_blank">Book a Call</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <img
+      class="hero-img"
+      src="https://i.ibb.co/VpWq0TS3/IMG-2407.jpg"
+      alt="Filip Velkovski"
+      loading="eager"
+    />
+    <div class="hero-gradient"></div>
+    <div class="hero-purple-tint"></div>
+<div class="hero-content">
+[5/14/2026 12:02 AM] MedBed Access Center: <span class="hero-label"><span class="glow-dot"></span>Done For You · Creator Revenue Systems</span>
+  <h1 class="hero-title">
+    Filip<br /><em>Velkovski</em>
+  </h1>
+  <p class="hero-sub">
+    I build and run your entire monetisation system — funnels, offers, emails, sales tracking — so your audience finally starts printing revenue. You create. I handle the rest.
+  </p>
+  <div class="hero-cta">
+    <a href="https://calendar.app.google/4JnhMynUJskUQgho9" target="_blank" class="btn-primary">Book a Free Strategy Call</a>
+  </div>
+</div>
+
+<div class="scroll-hint">
+  <div class="scroll-line"></div>
+  <span>Scroll</span>
+</div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about" style="background: var(--deep); padding: 80px 24px;">
+    <div class="about reveal">
+      <div class="about-img-wrap">
+        <img
+          class="about-img"
+          src="https://i.ibb.co/yF6PBMVt/IMG-8286.jpg"
+          alt="Filip Velkovski"
+          loading="lazy"
+        />
+        <div class="about-img-border"></div>
+        <div class="about-img-glow"></div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">About</span>
+        <h2 class="section-title">I don't<br /><em>advise.</em><br />I execute.</h2>
+        <div class="divider"></div>
+        <p>
+          I'm Filip. I come in as your <em>behind-the-scenes operator</em> and take full ownership of your monetisation stack — from the offer architecture to the emails that close at 2am.
+        </p>
+        <p>
+          You don't get a strategy doc. You don't get homework. <strong>You get a complete, running revenue system built and managed for you</strong> — while you stay focused on the content that built your audience in the first place.
+        </p>
+        <p>
+          This is a <strong>done-for-you service.</strong> I'm in the backend every day, optimising, testing, and scaling. Your only job is to keep creating.
+        </p>
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-num">5<em>x</em></span>
+            <span class="stat-label">Avg Revenue Lift</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">90<em>d</em></span>
+            <span class="stat-label">To Full System</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">0<em>%</em></span>
+            <span class="stat-label">Your Extra Work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+
+  <section style="background: var(--black); padding: 80px 24px;">
+    <div class="problem-section reveal">
+      <span class="section-label">The Problem</span>
+      <h2 class="section-title">Big audience.<br /><em>Broken</em><br />back-end.</h2>
+      <div class="divider" style="margin: 28px auto;"></div>
+      <p class="problem-body">
+        You're posting. You're growing. People are watching, commenting, trusting you.<br />
+        But your bank account doesn't reflect any of that.<br /><br />
+        Maybe you launched a product and it flopped. Maybe you're getting sales but it feels random — no system, no consistency. Maybe you've tried to fix it yourself and ran out of time and energy.<br /><br />
+        <strong>The content was never the problem. The machine behind it is what's missing.</strong>
+      </p>
+      <div class="problem-highlight reveal">
+        "Most creators are sitting on a goldmine with no way to dig. The offer, the funnel, the follow-up — that's where the money lives. That's exactly what I build."
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO BREAK -->
+
+  <div class="photo-break">
+    <img
+      src="https://i.ibb.co/TMKKz5rW/IMG-9145.jpg"
+      alt="Filip Velkovski"
+      loading="lazy"
+    />
+    <div class="photo-break-overlay">
+      <p class="photo-break-quote">
+        You don't need to learn funnels.<br />
+        You need someone to <em>build them for you.</em>
+      </p>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+
+  <section id="services" class="services-wrap">
+    <div class="services-inner reveal">
+[5/14/2026 12:02 AM] MedBed Access Center: If you're in, we start building immediately.</p>
+    </li>
+  </ul>
+</div>
+
+  </section>
+
+  <!-- FINAL CTA -->
+
+  <section id="contact" class="cta-section" style="min-height: 80vh; display: flex; align-items: center;">
+    <img
+      class="cta-img"
+      src="https://i.ibb.co/bMxbnxYb/IMG-3518.jpg"
+      alt="Filip Velkovski"
+      loading="lazy"
+    />
+    <div class="cta-overlay"></div>
+    <div class="cta-content reveal">
+      <span class="section-label"><span class="glow-dot"></span>Limited Spots Available</span>
+      <h2 class="section-title">Book your<br /><em>free</em><br />strategy call.</h2>
+      <div class="divider"></div>
+      <p>
+        I only work with a small number of creators at a time — this isn't a template, it's a hands-on done-for-you operation. On the call we'll look at your current setup, identify exactly where the money is leaking, and map out what the full system looks like for your business.
+      </p>
+      <p style="font-size: 13px; color: var(--muted); margin-bottom: 36px;">
+        No pitch. No fluff. Just a real 30-minute conversation about what it would take to turn your audience into consistent revenue.
+      </p>
+      <a href="https://calendar.app.google/4JnhMynUJskUQgho9" target="_blank" class="btn-primary">Book Your Free Call →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <span class="footer-name">Filip Velkovski</span>
+    <ul class="footer-links">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">YouTube</a></li>
+      <li><a href="#">Twitter / X</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Filip Velkovski · Shadow Operator</span>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Stagger service cards
+    const cards = document.querySelectorAll('.service-card');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const cards = entry.target.querySelectorAll('.service-card');
+          cards.forEach((card, i) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateX(-16px)';
+            card.style.transition = opacity 0.5s ${i * 0.1}s ease, transform 0.5s ${i * 0.1}s ease;
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'none';
+            }, 100);
+          });
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const serviceCards = document.querySelector('.service-cards');
+    if (serviceCards) cardObserver.observe(serviceCards);
+  </script>
+
+</body>
+</html>
+[5/14/2026 12:02 AM] MedBed Access Center: <div class="services-img-col">
+        <div class="services-img-wrap">
+          <img
+            class="services-img"
+            src="https://i.ibb.co/4Z5hsGVN/IMG-0305.jpg"
+            alt="Filip Velkovski"
+            loading="lazy"
+          />
+          <div class="services-img-overlay"></div>
+        </div>
+      </div>
+  <div>
+    <span class="section-label">The Done-For-You System</span>
+    <h2 class="section-title">I build it.<br />I run it.<br /><em>You profit.</em></h2>
+    <div class="divider"></div>
+
+    <div class="service-cards">
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <div class="service-name">Content Strategy</div>
+        <p class="service-desc">I map out a full content strategy engineered to sell — not just grow. Every post, reel, and video is planned to drive qualified traffic into your offer. Done for you, handed over ready to film.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <div class="service-name">Funnel Build & Optimisation</div>
+        <p class="service-desc">I build your entire sales funnel from scratch — or audit and fix what's already there. Landing pages, VSLs, checkout flows, upsells. Every conversion point built, tested, and optimised by me.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <div class="service-name">Offer Restructuring</div>
+        <p class="service-desc">I reposition and repackage your high-ticket digital product so it commands the price it deserves. Naming, framing, pricing, bonuses — the full offer architecture, done for you.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <div class="service-name">Sales Tracking & Reporting</div>
+        <p class="service-desc">I set up your revenue dashboard so you can see exactly what's converting and where. No more guessing. I track everything and give you clean weekly reports — you stay informed without doing a thing.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">05</span>
+        <div class="service-name">Email Automations</div>
+        <p class="service-desc">I write and deploy your full email system — welcome sequences, nurture flows, launch campaigns, abandoned cart recovery. Fully automated, running in the background, closing sales while you sleep.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- WHO IT'S FOR -->
+
+  <section id="for-you" style="background: var(--black); padding: 80px 24px;">
+    <div class="who-wrap reveal">
+      <span class="section-label">Who This Is For</span>
+      <h2 class="section-title">This is <em>for you</em><br />if…</h2>
+      <div class="divider"></div>
+  <ul class="who-list">
+    <li class="who-item">
+      <div class="who-check"></div>
+      <p class="who-text"><strong>You have an engaged audience</strong> — on YouTube, Instagram, TikTok, or a newsletter — and people genuinely trust your recommendations.</p>
+    </li>
+    <li class="who-item">
+      <div class="who-check"></div>
+      <p class="who-text"><strong>You have a digital product or want one</strong> — a course, coaching programme, community, or any high-ticket offer that isn't selling at the volume or price it should.</p>
+    </li>
+    <li class="who-item">
+      <div class="who-check"></div>
+      <p class="who-text"><strong>You want it completely done for you</strong> — you're not looking for another course, template, or strategy call. You want someone to come in and build the whole thing.</p>
+    </li>
+    <li class="who-item">
+      <div class="who-check"></div>
+      <p class="who-text"><strong>You're tired of inconsistent revenue</strong> — some months are great, most are average, and you have no system to make sales predictable.</p>
+    </li>
+    <li class="who-item">
+      <div class="who-check"></div>
+      <p class="who-text"><strong>You're ready to move fast</strong> — I work with a small number of creators at a time and I operate with urgency.
